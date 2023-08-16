@@ -1,6 +1,7 @@
 package flag
 
 import (
+	"flag"
 	"fmt"
 	"sort"
 	"strings"
@@ -19,6 +20,8 @@ type LAngleSeparatedMapStringString struct {
 func NewLAngleSeparatedMapStringString(m *map[string]string) *LAngleSeparatedMapStringString {
 	return &LAngleSeparatedMapStringString{Map: m}
 }
+
+var _ flag.Value = &LAngleSeparatedMapStringString{}
 
 // String implements github.com/spf13/pflag.Value.
 func (m *LAngleSeparatedMapStringString) String() string {

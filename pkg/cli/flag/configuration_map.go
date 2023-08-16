@@ -1,12 +1,15 @@
 package flag
 
 import (
+	"flag"
 	"fmt"
 	"sort"
 	"strings"
 )
 
 type ConfigurationMap map[string]string
+
+var _ flag.Value = &ConfigurationMap{}
 
 func (m *ConfigurationMap) String() string {
 	var paris []string

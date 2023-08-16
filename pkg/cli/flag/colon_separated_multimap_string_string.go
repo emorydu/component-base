@@ -1,6 +1,7 @@
 package flag
 
 import (
+	"flag"
 	"fmt"
 	"sort"
 	"strings"
@@ -28,6 +29,8 @@ type ColonSeparatedMultiMapStringString struct {
 func NewColonSeparatedMultiMapStringString(m *map[string][]string) *ColonSeparatedMultiMapStringString {
 	return &ColonSeparatedMultiMapStringString{MultiMap: m}
 }
+
+var _ flag.Value = &ColonSeparatedMultiMapStringString{}
 
 // Set implements github.com/spf13/pflag.Value.
 func (m *ColonSeparatedMultiMapStringString) Set(value string) error {

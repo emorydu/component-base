@@ -1,6 +1,7 @@
 package flag
 
 import (
+	"flag"
 	"fmt"
 	"sort"
 	"strconv"
@@ -21,6 +22,8 @@ type MapStringBool struct {
 func NewMapStringBool(m *map[string]bool) *MapStringBool {
 	return &MapStringBool{Map: m}
 }
+
+var _ flag.Value = &MapStringBool{}
 
 // String implements github.com/spf13/pflag.Value.
 func (m *MapStringBool) String() string {

@@ -1,6 +1,7 @@
 package flag
 
 import (
+	"flag"
 	"fmt"
 	"sort"
 	"strings"
@@ -28,6 +29,8 @@ func NewMapStringString(m *map[string]string) *MapStringString {
 func NewMapStringStringNoSplit(m *map[string]string) *MapStringString {
 	return &MapStringString{Map: m, NoSplit: true}
 }
+
+var _ flag.Value = &MapStringString{}
 
 // String implements github.com/spf13/pflag.Value.
 func (m *MapStringString) String() string {
