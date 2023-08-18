@@ -1,8 +1,7 @@
-// Copyright 2020 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
+// Copyright 2023 Emory.Du <orangeduxiaocheng@gmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file.
 
-//
 package jsonutil
 
 type Json interface {

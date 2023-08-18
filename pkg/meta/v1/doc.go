@@ -1,3 +1,7 @@
+// Copyright 2023 Emory.Du <orangeduxiaocheng@gmail.com>. All rights reserved.
+// Use of this source code is governed by a MIT style
+// license that can be found in the LICENSE file.
+
 // Package v1 contains API types that are common to all versions.
 //
 // The package contains two categories of types:
